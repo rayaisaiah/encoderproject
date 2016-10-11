@@ -1,3 +1,4 @@
+
 var echoTranslations = {
 65 : "a",
 66 : "b",
@@ -24,7 +25,8 @@ var echoTranslations = {
 87 : "w",
 88 : "x",
 89 : "y",
-90 : "z"
+90 : "z",
+
 }
 
 $("#inputText").keydown(function(e) {

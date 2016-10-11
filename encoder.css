@@ -1,7 +1,16 @@
+body{
+  background-image: url("http://www.planwallpaper.com/static/images/Alien_Ink_2560X1600_Abstract_Background_1.jpg");
+}
+
+h1 {
+  font-family: 'Chewy', cursive;
+  font-size: 60px;
+}
+
 #textArea {
   width: 700px;
   height: 150px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Chewy', cursive;
   font-size: 36px;
 }
 
