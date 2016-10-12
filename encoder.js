@@ -1,4 +1,4 @@
-
+//var textVal = $('#inputText').val();
 var echoTranslations = {
 65 : "a",
 66 : "b",
@@ -25,11 +25,17 @@ var echoTranslations = {
 87 : "w",
 88 : "x",
 89 : "y",
-90 : "z",
+90 : "z"
+//8 : $('#inputText').val(textVal.substring(0,textVal.length - 1))
 
 }
 
 $("#inputText").keydown(function(e) {
 var answer = echoTranslations[e.keyCode];
 $('#textArea').append(answer);
-})
+});
+
+$("input[type='radio']").click(function() {
+  $("input:checked").prop('checked', false);
+  $(this).prop('checked', true);
+});
