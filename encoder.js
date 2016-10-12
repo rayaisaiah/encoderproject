@@ -1,6 +1,5 @@
-//var textVal = $('#inputText').val();
 var echoTranslations = {
-64 : "z",  
+64 : "z",
 65 : "a",
 66 : "b",
 67 : "c",
@@ -26,20 +25,26 @@ var echoTranslations = {
 87 : "w",
 88 : "x",
 89 : "y",
-90 : "z"
-//8 : $('#inputText').val(textVal.substring(0,textVal.length - 1))
+90 : "z",
+8 : returnDelete()
 
 }
+
 
 
 $("#inputText").keydown(function(e) {
 
 if ($("input:checked").val() == "echo"){
+
   var answer = echoTranslations[e.keyCode];
   $('#textArea').append(answer);
 }
 else if ($("input:checked").val() == "caesarCipher"){
   var answer = echoTranslations[e.keyCode - 1];
+  $('#textArea').append(answer);
+}
+else if ($("input:checked").val() == "heiroglyphics"){
+  var answer = echoTranslations[e.keyCode];
   $('#textArea').append(answer);
 }
 
@@ -55,3 +60,8 @@ $("input[type='radio']").click(function() {
   $("input:checked").prop('checked', false);
   $(this).prop('checked', true);
 });
+//DELETE BUTTON
+function returnDelete() {
+var textVal = $('#textArea').val();
+$('#textArea').val(textVal.substring(0,textVal.length - 1));
+}
