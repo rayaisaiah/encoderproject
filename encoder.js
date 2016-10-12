@@ -1,5 +1,6 @@
 //var textVal = $('#inputText').val();
 var echoTranslations = {
+64 : "z",  
 65 : "a",
 66 : "b",
 67 : "c",
@@ -30,11 +31,26 @@ var echoTranslations = {
 
 }
 
+
 $("#inputText").keydown(function(e) {
-var answer = echoTranslations[e.keyCode];
-$('#textArea').append(answer);
+
+if ($("input:checked").val() == "echo"){
+  var answer = echoTranslations[e.keyCode];
+  $('#textArea').append(answer);
+}
+else if ($("input:checked").val() == "caesarCipher"){
+  var answer = echoTranslations[e.keyCode - 1];
+  $('#textArea').append(answer);
+}
+
+
+
 });
 
+
+
+
+//NOT PART OF KEYDOWN EVENT!
 $("input[type='radio']").click(function() {
   $("input:checked").prop('checked', false);
   $(this).prop('checked', true);
