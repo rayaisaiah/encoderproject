@@ -17,24 +17,27 @@ h1 {
 #inputArea {
   width: 700px;
   height: 50px;
+  font-family: 'Chewy', cursive;
 }
 
 #inputText {
   width: 700px;
   height: 50px;
   font-size: 16px;
+  font-family: 'Chewy', cursive;
 }
 
 #translationChoices {
   margin: 10px;
   font-family: sans-serif;
   font-size: 18px;
+  font-family: 'Chewy', cursive;
 }
 
 #translationArea {
   width: 700px;
   height: 150px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Chewy', cursive;
   font-size: 36px;
 }
 
@@ -42,4 +45,5 @@ h1 {
   width: 700px;
   height: 50px;
   font-size: 16px;
+  font-family: 'Chewy', cursive;
 }

@@ -26,7 +26,8 @@ var echoTranslations = {
 88 : "x",
 89 : "y",
 90 : "z",
-32: "",
+91 : "a",
+32: "   ",
 8 : returnDelete()
 
 }
@@ -59,7 +60,7 @@ var heiroglyphics = {
   88: "<img src='images/heiroglyphics/x.gif'>",
   89: "<img src='images/heiroglyphics/y.gif'>",
   90: "<img src='images/heiroglyphics/z.gif'>",
-  32: "",
+  32: "  ",
   8: ""
 }
 $("#inputText").keydown(function(e) {
@@ -77,9 +78,19 @@ else if ($("input:checked").val() == "heiroglyphics"){
   var answer = heiroglyphics[e.keyCode];
   $('#textArea').append(answer);
 }
+});
+//translationArea
+$("#translationInputText").keydown(function(e) {
 
+  if($("input:checked").val() == "caesarCipher"){
 
-
+    var answer = echoTranslations[e.keyCode + 1];
+    $('#translationArea').append(answer);
+  }
+  else if ($("input:checked").val() == "echo"){
+    var answer = echoTranslations[e.keyCode];
+    $('#translationArea').append(answer);
+  }
 });
 
 
@@ -94,4 +105,5 @@ $("input[type='radio']").click(function() {
 function returnDelete() {
 var textVal = $('#textArea').val();
 $('#textArea').val(textVal.substring(0,textVal.length - 1));
+return;
 }
