@@ -1,3 +1,4 @@
+//For echo and caesar cipher
 var echoTranslations = {
 64 : "z",
 65 : "a",
@@ -32,7 +33,7 @@ var echoTranslations = {
 
 }
 
-
+//Heiroglyphics!
 var heiroglyphics = {
   65: "<img src='images/heiroglyphics/a.gif'>",
   66: "<img src='images/heiroglyphics/b.gif'>",
@@ -63,6 +64,7 @@ var heiroglyphics = {
   32: "  ",
   8: ""
 }
+//Translations
 $("#inputText").keydown(function(e) {
 
 if ($("input:checked").val() == "echo"){
@@ -79,7 +81,7 @@ else if ($("input:checked").val() == "heiroglyphics"){
   $('#textArea').append(answer);
 }
 });
-//translationArea
+//Decoding the translations!
 $("#translationInputText").keydown(function(e) {
 
   if($("input:checked").val() == "caesarCipher"){
@@ -96,7 +98,7 @@ $("#translationInputText").keydown(function(e) {
 
 
 
-//NOT PART OF KEYDOWN EVENT!
+//NOT PART OF KEYDOWN EVENT! (Radio Buttons!)
 $("input[type='radio']").click(function() {
   $("input:checked").prop('checked', false);
   $(this).prop('checked', true);
