@@ -6,6 +6,10 @@ h1 {
   font-family: 'Chewy', cursive;
   font-size: 60px;
 }
+h2, h3 {
+  font-family: 'Chewy', cursive;
+  font-size: 60px;
+}
 
 #textArea {
   width: 700px;
