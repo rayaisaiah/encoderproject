@@ -28,9 +28,7 @@ var echoTranslations = {
 89 : "y",
 90 : "z",
 91 : "a",
-32: "   ",
-8 : returnDelete()
-
+32: "   "
 }
 
 //Heiroglyphics!
@@ -66,7 +64,9 @@ var heiroglyphics = {
 }
 //Translations
 $("#inputText").keydown(function(e) {
-
+if (e.keyCode == 8) {
+  document.getElementById('textArea').textContent = document.getElementById('textArea').textContent.substr(0, document.getElementById('textArea').textContent.length - 1)
+}
 if ($("input:checked").val() == "echo"){
 
   var answer = echoTranslations[e.keyCode];
@@ -103,9 +103,3 @@ $("input[type='radio']").click(function() {
   $("input:checked").prop('checked', false);
   $(this).prop('checked', true);
 });
-//DELETE BUTTON
-function returnDelete() {
-var textVal = $('#textArea').val();
-$('#textArea').val(textVal.substring(0,textVal.length - 1));
-return;
-}
