@@ -64,6 +64,7 @@ var heiroglyphics = {
 }
 //Translations
 $("#inputText").keydown(function(e) {
+//DELETE BUTTON
 if (e.keyCode == 8) {
   document.getElementById('textArea').textContent = document.getElementById('textArea').textContent.substr(0, document.getElementById('textArea').textContent.length - 1)
 }
